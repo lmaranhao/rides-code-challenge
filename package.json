@@ -32,9 +32,10 @@
     "typescript": "^4.4.3"
   },
   "scripts": {
-    "start": "shx rm -rf ./build && tsc && shx cp ./src/db/rides.db ./build/db && node ./build/app.js",
+    "start": "shx rm -rf ./build && tsc && shx cp ./src/db/rides.db ./build/db && node ./build/app.js start-mongo",
     "integration-test": "jest --coverage --detectOpenHandles --forceExit --silent -t integration-test",
-    "unit-test": "jest --coverage --detectOpenHandles --forceExit --silent -t unit-test"
+    "unit-test": "jest --coverage --detectOpenHandles --forceExit --silent -t unit-test",
+    "test": "npm run unit-test && npm run integration-test"
   },
   "author": "lmaranhao@gmail.com",
   "license": "ISC"

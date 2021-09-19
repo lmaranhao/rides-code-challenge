@@ -1,5 +1,5 @@
 export default class Ride {
-    rideId: number;
+    rideId: string;
 
     driverName: string;
 
@@ -7,7 +7,7 @@ export default class Ride {
 
     createdAt: string;
 
-    constructor(rideId: number, driverName: string, driverVehicle: string, createdAt: string) {
+    constructor(rideId: string, driverName: string, driverVehicle: string, createdAt: string) {
       this.rideId = rideId;
       this.driverName = driverName;
       this.driverVehicle = driverVehicle;

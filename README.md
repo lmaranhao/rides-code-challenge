@@ -1,6 +1,6 @@
 # rides-code-challenge
-![Image of Yaktocat](./challenge_instructions.png)
-![Image of Yaktocat](./challenge_instructions2.png)
+![](./challenge_instructions.png)
+![](./challenge_instructions2.png)
 
 # System requirements
 
@@ -14,6 +14,7 @@ npm 6.12.0
 3. you won't need any sql database installed on your machine - it uses an embeded sqlite instance
 
 # Instructions
+## To run the application
 1. git clone de project
 2. cd to project folder and run the commands below
 ```
@@ -21,14 +22,14 @@ npm install
 npm start
 ```
 3. you should see this log in your console
-```
-$ npm start
 
-> rides-code-challenge@1.0.0 start C:\Users\LEONARDOMARANHAOFARI\rides-code-challenge
-> shx rm -rf ./build && tsc && shx cp ./src/db/rides.db ./build/db && node ./build/app.js
+![](./start.png)
 
-mongodb://127.0.0.1:27017/
-app running on http://localhost:3000
-
-```
 4. open [http://localhost:3000/rides](http://localhost:3000/rides) in your browser
+
+## To run the tests
+After you are done with steps 1 and 2 above you can run the tests scripts.
+The project has 2 tests scripts: `unit.test.ts` and `integration.test.ts`
+You can run them in separate by issuing `npm run unit-test` and `npm run integration-test`, or you can run both, one after the other, by calling `npm run test` as below:
+
+![](./tests.png)
