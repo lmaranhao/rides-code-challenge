@@ -33,7 +33,8 @@
   },
   "scripts": {
     "start": "shx rm -rf ./build && tsc && shx cp ./src/db/rides.db ./build/db && node ./build/app.js",
-    "test": "jest --coverage --detectOpenHandles --forceExit"
+    "integration-test": "jest --coverage --detectOpenHandles --forceExit --silent -t integration-test",
+    "unit-test": "jest --coverage --detectOpenHandles --forceExit --silent -t unit-test"
   },
   "author": "lmaranhao@gmail.com",
   "license": "ISC"
