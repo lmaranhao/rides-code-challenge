@@ -1,6 +1,4 @@
 import express, { NextFunction, Request, Response } from 'express';
-
-import { Server } from 'http';
 import RideDao from './dao/ride-dao';
 import MongoDBClient from './db/mongo-db-client';
 import Ride from './models/ride';
