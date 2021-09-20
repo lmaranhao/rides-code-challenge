@@ -1,4 +1,4 @@
-# rides-code-challenge
+# Rides Code Challenge
 ![](./challenge_instructions.png)
 ![](./challenge_instructions2.png)
 
