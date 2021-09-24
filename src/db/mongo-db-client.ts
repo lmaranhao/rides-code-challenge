@@ -70,6 +70,9 @@ export default class MongoDBClient {
         return ride;
       });
       return rides;
+    } catch (e) {
+      console.log(e);
+      return [];
     } finally {
       await MongoDBClient.client.close();
     }

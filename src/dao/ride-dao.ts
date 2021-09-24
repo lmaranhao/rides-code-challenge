@@ -4,8 +4,9 @@ import Ride from '../models/ride';
 
 export default class RideDao {
   public static async findRides(): Promise<Ride[]> {
-    const sqlRides: Ride[] = await SqlDBClient.findRides();
-    const mongoRides: Ride[] = await MongoDBClient.findRides();
+    const [sqlRides, mongoRides]: [Ride[], Ride[]] = await Promise.all(
+      [SqlDBClient.findRides(), MongoDBClient.findRides()],
+    );
     const totalRides = sqlRides.concat(mongoRides);
     return totalRides;
   }

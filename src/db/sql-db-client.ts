@@ -17,8 +17,13 @@ export default class SqlDBClient {
     }
 
     public static async findRides(): Promise<Ride[]> {
-      const db: any = await SqlDBClient.getSqlDb();
-      const sqlResults: Ride[] = await db.all('select CAST(rideId as varchar) as rideId, driverName, driverVehicle, strftime("%Y-%m-%dT%H:%M:%fZ", created) as createdAt from Rides');
-      return sqlResults;
+      try {
+        const db: any = await SqlDBClient.getSqlDb();
+        const sqlResults: Ride[] = await db.all('select CAST(rideId as varchar) as rideId, driverName, driverVehicle, strftime("%Y-%m-%dT%H:%M:%fZ", created) as createdAt from Rides');
+        return sqlResults;
+      } catch (e) {
+        console.log(e);
+        return [];
+      }
     }
 }
